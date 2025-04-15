@@ -35,6 +35,10 @@ public class BuyerDataPage {
                 .pause(Duration.ofSeconds(1))
                 .click(postalCode).sendKeys(zip)
                 .pause(Duration.ofSeconds(1))
-                .moveToElement(continueButton).click().build().perform();
+                .build().perform();
+    }
+
+    public void clickContinue() {
+        continueButton.click();
     }
 }

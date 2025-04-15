@@ -7,7 +7,7 @@
     <parameter name="firstName" value="Black"/>
     <parameter name="lastName" value="Mamba"/>
     <parameter name="zip" value="999"/>
-    <parameter name="browser" value="EDGE" />
+    <parameter name="browser" value="FIREFOX" />
 
     <test name="Login, Add to Cart, and Checkout">
         <classes>

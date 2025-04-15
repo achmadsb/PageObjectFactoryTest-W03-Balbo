@@ -1,5 +1,6 @@
 package com.juaracoding.pages;
 
+import com.juaracoding.utils.TakeScreenShoot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,6 +31,10 @@ public class LoginPage{
                 .pause(Duration.ofSeconds(1))
                 .click(passwordField).sendKeys(password)
                 .pause(Duration.ofSeconds(1))
-                .moveToElement(loginButton).click().build().perform();
+                .build().perform();
+    }
+
+    public void clickLogin() {
+        loginButton.click();
     }
 }

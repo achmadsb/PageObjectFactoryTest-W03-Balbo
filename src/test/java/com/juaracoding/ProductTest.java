@@ -1,12 +1,14 @@
 package com.juaracoding;
 
 import com.juaracoding.pages.ProductPage;
+import com.juaracoding.utils.TakeScreenShoot;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class ProductTest{
@@ -33,8 +35,10 @@ public class ProductTest{
     }
 
     @Test(priority = 1)
-    public void addToCart() throws InterruptedException {
+    public void addToCart() throws InterruptedException, IOException {
         scrollDown(100);
+        TakeScreenShoot.screenShootByDate(driver, "03");
+        Thread.sleep(1000);
         productPage.addToCart(0);
         Thread.sleep(1000);
         productPage.addToCart(1);
@@ -47,7 +51,11 @@ public class ProductTest{
         Thread.sleep(1000);
         productPage.addToCart(5);
         Thread.sleep(1000);
+        TakeScreenShoot.screenShootByDate(driver, "04");
+        Thread.sleep(1000);
         scrollUp();
+        Thread.sleep(1000);
+        TakeScreenShoot.screenShootByDate(driver, "05");
     }
 
     @Test(priority = 2)
